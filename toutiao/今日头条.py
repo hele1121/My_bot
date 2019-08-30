@@ -47,7 +47,6 @@ def get_index_page(offset, keyword):  # 请求索引页
 
 def parse_page_index(html):  # 解析索引页
     data = json.loads(html)
-    print(data)
     if data and 'data' in data.keys() and data['data']:  # 判断data 存在 和 'data' 存在 'data' 不为空
         for item in data.get('data'):
             if item.get('article_url'):
